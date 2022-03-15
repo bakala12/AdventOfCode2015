@@ -18,7 +18,7 @@ public abstract class AocDay<TParsedInput> : IDay
 
     public void Solve(string[] args)
     {
-        var fileContent = File.ReadAllText(InputFilePath);
+        var fileContent = File.ReadAllText(args.FirstOrDefault() ?? InputFilePath);
         var input = _inputParser.ParseInput(fileContent);
         Part1(input);
         Part2(input);
